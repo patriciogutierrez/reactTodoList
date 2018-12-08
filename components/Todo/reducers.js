@@ -5,7 +5,6 @@ const initialState = {
 }
 
 function addItemToList(state, newItem) {
-    console.log(state)
     return {
         ...state,
         items: [...state.items, { color: 'red', estado: false, todo: newItem, id: ++id }]
