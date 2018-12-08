@@ -5,11 +5,13 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { actionCreators as actions } from './actions';
 import AllTodo from './AllTodo';
+import { Font, AppLoading } from 'expo';
 class TodoList extends React.Component {
+
   state = {
     texto: ''
   }
-  _clear(){
+  _clear() {
     this.state = '';
   }
   render() {
@@ -27,7 +29,7 @@ class TodoList extends React.Component {
             <Title>Mi Lista</Title>
           </Body>
           <Right>
-            <Button transparent onPress={()=>deleteList()}>
+            <Button transparent onPress={() => deleteList()}>
               <Text>Limpiar</Text>
             </Button>
           </Right>
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
-  const { estado, color, todo, id, items} = state;
+  const { estado, color, todo, id, items } = state;
   return {
     estado,
     color,
