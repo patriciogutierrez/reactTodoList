@@ -1,11 +1,10 @@
 import React from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Input, Header, Content, Button, Container, Text, Body, Title, Left, Right } from 'native-base';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { actionCreators as actions } from './actions';
 import AllTodo from './AllTodo';
-import { Font, AppLoading } from 'expo';
 class TodoList extends React.Component {
 
   state = {
